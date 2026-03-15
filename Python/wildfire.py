@@ -544,8 +544,3 @@ page = SolaraViz(
     model_params=model_params,
     name="Autonomous Fire Suppression Simulation"
 )
-
-if __name__ == "__main__":
-    print("Simulation is ready.")
-    print("Run the following command in your terminal to start the server:")
-    print("py -3.14 -m solara run wildfire.py")
