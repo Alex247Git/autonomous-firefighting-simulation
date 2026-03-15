@@ -83,9 +83,9 @@ class FireUnitAgent(Agent):
         self.water_left = self.water_capacity
         self.target_pos = None
         self.extinguish_range = 2  
-        self.efficiency = self.random.uniform(0.7, 1.0)  
+        self.efficiency = self.random.uniform(0.7, 1.0)
+        self.speed = self.model.scouter_speed * 0.5  # Fire units move at half the speed of scouters
 
-    def step(self):
         # STATE 1: Refill water at base if empty
         if self.water_left <= 0:
             if math.dist(self.pos, self.model.base_pos) <= 1.5:
