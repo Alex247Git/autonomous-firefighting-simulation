@@ -30,6 +30,7 @@ class TreeAgent(Agent):
         self.heat_intensity = 0  
         self.age = self.random.randint(5, 50)  
         self.type = self.random.choice(['Pine', 'Oak', 'Birch'])  
+        self.recovery_time = 0  # Timer for water evaporation
 
     def step(self):
         if self.condition == "Burning":
@@ -46,6 +47,15 @@ class TreeAgent(Agent):
         elif self.condition == "Green" and self.heat_level > 0:
             # Gradually cool down if not ignited
             self.heat_level = max(0, self.heat_level - 0.1)
+            
+        elif self.condition == "Extinguished":
+            # Water evaporates over time, making the tree vulnerable again
+            if self.recovery_time > 0:
+                self.recovery_time -= 1
+            else:
+                self.condition = "Green"
+                self.moisture = self.random.uniform(0.3, 0.7) # Becomes flammable again
+                self.heat_level = 0
 
 class ScouterAgent(Agent):
     """Drone/Scout agent that patrols the forest to detect new fires."""
@@ -84,7 +94,12 @@ class FireUnitAgent(Agent):
         self.target_pos = None
         self.extinguish_range = 2  
         self.efficiency = self.random.uniform(0.7, 1.0)
-        self.speed = self.model.scouter_speed * 0.5  # Fire units move at half the speed of scouters
+
+    def step(self):
+        # Dynamic speed: Fire units move relative to the scouter speed setting
+        current_speed = self.model.scouter_speed * 0.5
+        if self.random.random() > current_speed:
+            return  # Skip turn to simulate slower movement
 
         # STATE 1: Refill water at base if empty
         if self.water_left <= 0:
@@ -149,6 +164,7 @@ class FireUnitAgent(Agent):
                 
                 if self.water_left >= water_needed:
                     agent.condition = "Extinguished"
+                    agent.recovery_time = self.model.random.randint(300, 500) # Evaporation timer
                     self.water_left -= water_needed
                     
                     if pos in self.model.known_fires:
