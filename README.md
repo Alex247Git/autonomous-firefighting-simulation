@@ -61,7 +61,7 @@ pip install -r requirements.txt
 
 **4. Launch the Simulation**
 ```bash
-py -3.14 -m solara run run.py
+py -3.14 -m solara run app.py
 ```
 *(The UI will automatically open in your default web browser, usually at `http://localhost:8765`)*
 
