@@ -7,8 +7,8 @@ from agents import BaseAgent, TreeAgent, ScouterAgent, FireUnitAgent
 
 class WildfireModel(Model):
     def __init__(self, width=30, height=30, num_scouters=5, num_units=5, 
-                 water_capacity=12, burn_time=300, scouter_speed=0.3, 
-                 wind_direction=0, wind_strength=1.0, tree_density=65,
+                water_capacity=12, burn_time=300, scouter_speed=0.3, 
+                wind_direction=0, wind_strength=1.0, tree_density=65,
                  temperature=25, humidity=50, smoke_visibility=0.5, **kwargs):
         
         super().__init__(**kwargs)
