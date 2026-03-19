@@ -3,6 +3,7 @@
 ![Python Version](https://img.shields.io/badge/Python-3.10%20%7C%203.14-blue)
 ![Mesa](https://img.shields.io/badge/Mesa-Agent_Based_Modeling-orange)
 ![Solara](https://img.shields.io/badge/Solara-Web_UI-brightgreen)
+![Python Unit Tests](https://github.com/Alex247Git/wildfire-simulation/actions/workflows/pytest.yml/badge.svg)
 
 A complex, Agent-Based Modeling (ABM) simulation built with Python and Mesa. This project simulates the unpredictable spread of forest fires and the autonomous, AI-driven response of firefighting units. The environment and agents are visualized in real-time through an interactive Solara web dashboard.
 
@@ -61,7 +62,7 @@ pip install -r requirements.txt
 
 **4. Launch the Simulation**
 ```bash
-python -m solara run wildfire.py
+py -3.14 -m solara run app.py
 ```
 *(The UI will automatically open in your default web browser, usually at `http://localhost:8765`)*
 
