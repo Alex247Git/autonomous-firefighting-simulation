@@ -28,4 +28,5 @@ jobs:
         
     - name: Run tests with pytest
       run: |
+        cd Python
         pytest tests/
