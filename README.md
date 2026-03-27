@@ -33,7 +33,28 @@ The simulation relies on a combination of **Cellular Automata** (for environment
 
 ---
 
+## 📊 Scientific Analysis: The Tipping Point
+
+This project doesn't just look good; it produces mathematically sound data. By utilizing Mesa's `batch_run`, we simulated the environment hundreds of times across varying forest densities to observe the **Percolation Threshold**.
+
+![Tipping Point Plot](Python/percolation_plot.png)
+
+**The Insight:** The graph perfectly captures the "Tipping Point" of complex networks. 
+* At **< 55% density**, the fire struggles to jump between trees and dies out quickly.
+* At **~60% density**, a phase transition occurs. The trees form a connected cluster across the grid, allowing the fire to spread exponentially and cause massive destruction.
+
+---
+
+## 🛠️ Tech Stack
+
+* **Core Logic:** Python, Mesa (ABM Framework), NetworkX
+* **UI & Visualization:** Solara, Matplotlib
+* **Data Analysis:** Pandas
+* **DevOps:** Pytest, GitHub Actions
+
 ## 🚀 Installation & Usage
+
+---
 
 It is highly recommended to run this project inside a Python Virtual Environment. The code is optimized for **Python 3.14** but is backwards compatible.
 
