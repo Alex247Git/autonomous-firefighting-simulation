@@ -3,3 +3,4 @@ solara
 matplotlib
 pytest
 networkx
+pandas
