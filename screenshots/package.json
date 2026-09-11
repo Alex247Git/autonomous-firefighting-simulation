@@ -1,0 +1,13 @@
+{
+  "name": "firefighting-sim-screenshots",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Playwright screenshot capture for Autonomous Wildfire Simulation",
+  "scripts": {
+    "shot": "node playwright-capture.mjs",
+    "shot:ci": "node playwright-capture.mjs --ci"
+  },
+  "devDependencies": {
+    "playwright": "^1.63.0"
+  }
+}

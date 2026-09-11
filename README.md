@@ -45,6 +45,16 @@ This project doesn't just look good; it produces mathematically sound data. By u
 
 ---
 
+## 📸 Showcase
+
+Live capture from the simulation — generated with the [Playwright capture script](screenshots/README.md).
+
+| 🔥 Main Simulation | 📊 Percolation Analysis |
+|:---:|:---:|
+| ![Main Simulation — agent grid with trees, fire units, and scouter drones](docs/screenshots/01-main-simulation.png) | ![Percolation Analysis — tipping point threshold](docs/screenshots/02-percolation-analysis.png) |
+
+---
+
 ## 🛠️ Tech Stack
 
 * **Core Logic:** Python, Mesa (ABM Framework), NetworkX
