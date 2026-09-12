@@ -112,5 +112,13 @@ py -3.14 -m solara run app.py
 * [Mesa](https://github.com/projectmesa/mesa) - Agent-Based Modeling framework in Python.
 * [Solara](https://solara.dev/) - Reactive UI framework for Python web apps.
 
+## 🔗 More From Me
+
+Also part of my portfolio:
+
+- 💼 [JobSearch Platform](https://github.com/Alex247Git/jobsearch) — React + Express job platform with AI-matched recommendations and real-time chat
+- 🗺️ [Alumni Career Map](https://github.com/Alex247Git/alumni-career-map) — PHP (Slim) + Leaflet alumni job-mapping platform
+- 🌐 [Portfolio](https://alex247git.github.io/) — live overview of all my projects
+
 ---
 *Created by Alex - Feel free to connect or contribute!*
